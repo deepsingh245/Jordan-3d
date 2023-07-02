@@ -34,13 +34,13 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 #card1{
   position: absolute;
 margin-top: 540px;
-margin-left: 500px;
+margin-left: 700px;
 }
 
 #card2{
   position: absolute;
 margin-top:1110px;
-margin-left: 100px;
+margin-left: 300px;
 }
 
 #app-bar{

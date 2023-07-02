@@ -56,7 +56,7 @@ export default function App() {
         <ScrollParallax isHorizontal:true>
           <Typography
             component="h2"
-            marginLeft={"-370px"}
+            marginLeft={"-360px"}
             sx={{
               fontFamily: "monospace",
               fontWeight: 900,
