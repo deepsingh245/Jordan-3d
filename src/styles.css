@@ -13,11 +13,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-/* html,
-body, 
-#root {
-  height: 100%;
-} */
+
 /* 
 canvas {
   /* background-color:grey; 
@@ -50,10 +46,75 @@ margin-left: 300px;
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
-  position: fixed;
+  position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
 
+}
+
+#contact{
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+padding: 20px;
+
+}
+#form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#button{
+  color: #19191b;
+  background: rgba(155, 155, 222, 0.1);  box-shadow: 0 8px 32px 0 rgba(38, 38, 46, 0.37);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#logo{
+  width: 80px;
+  height:40px;
+  filter: invert(1);
+}
+
+/* responsiveness */
+
+@media (max-width: 1024px) {
+  html,
+body, 
+#root {
+  width:fit-content;
+}
+  #card1 {
+    margin-left: 400px;
+  }
+  #card2{
+    margin-left: 100px;
+  }
+  #canvas-box{
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  html,body,#root{
+    width:fit-content;
+  }
+
+  /* canvas{
+    width: 767px;
+    height:min-content;
+  } */
+}
+
+#app-bar{
+  position: relative;
 }

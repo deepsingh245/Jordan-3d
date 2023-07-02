@@ -4,14 +4,11 @@ import { Box, Container, Typography } from "@mui/material";
 import "./styles.css";
 import { ScrollParallax } from "react-just-parallax";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
+import TextField from '@mui/material/TextField';
 import Button from "@mui/material/Button";
-import Aos from "aos";
+import SendIcon from '@mui/icons-material/Send';
 
-Aos.init({
-  duration: 1200,
-})
 
 const bull = (
   <Box
@@ -50,7 +47,7 @@ export default function App() {
             JOR
           </Typography>
         </ScrollParallax>
-        <Box sx={{ width: 1024, zIndex: -1 }}>
+        <Box id="canvas-box" sx={{height:"1630px",width:"1024px",zIndex: -1, }}>
           <Spline scene="https://prod.spline.design/Ac190z0XbborUono/scene.splinecode" />{" "}
         </Box>
         <ScrollParallax isHorizontal:true>
@@ -70,73 +67,163 @@ export default function App() {
         </ScrollParallax>
       </Container>
       <Container
-        sx={
-          {
-            display:"flex",
-            flexDirection:"column",
-            position:"absolute",
-            zIndex:"3",
-            top:"0",
-            // overflowX:"auto",
-            // whiteSpace:"nowrap"
-          }
-        }
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          position: "absolute",
+          zIndex: "3",
+          top: "0",
+          // overflowX:"auto",
+          // whiteSpace:"nowrap"
+        }}
       >
         <ScrollParallax isAbsolutelyPositioned="true">
-          <Card data-aos="slide-right" data-aos-delay="100" id="card1" sx={{ width: 500, height: 350, zIndex: "3" }}>
+          <Card
+            id="card1"
+            sx={{ width: 500, height: 270, zIndex: "3" }}
+          >
             <CardContent>
               <Typography
-                sx={{ fontSize: 14 }}
-                color="text.secondary"
-                gutterBottom
+                 variant="h5"
               >
-                Word of the Day
+               Jordan Air 4 Retro:
               </Typography>
-              <Typography variant="h5" component="div">
-                be{bull}nev{bull}o{bull}lent
+              <Typography  sx={{ mt:1, mb: 1.5 }} color="text.secondary" >
+              Classic and iconic design inspired by the original Air Jordan 1.
+                
+              </Typography>
+              <Typography sx={{ mt:1, mb: 1.5 }} color="text.secondary">
+              Sleek and stylish sneakers.
               </Typography>
               <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                adjective
+              Unique lace lockdown system.
               </Typography>
-              <Typography variant="body2">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
+              <Typography sx={{ mb: 1.5 }} color="text.secondary">
+              Visible Air-Sole units.
               </Typography>
+              <Typography sx={{ mb: 1.5 }} color="text.secondary">
+              Signature Nike logo.
+              </Typography>
+             
             </CardContent>
-            <CardActions>
-              <Button size="small">Learn More</Button>
-            </CardActions>
+           
           </Card>
         </ScrollParallax>
 
         <ScrollParallax isAbsolutelyPositioned="true">
-          <Card data-aos="slide-left" data-aos-delay="100" id="card2" sx={{ width: 500, height: 350, zIndex: "3" }}>
+          <Card
+            id="card2"
+            sx={{ width: 500, height: 270, zIndex: "3" }}
+          >
             <CardContent>
-              <Typography
-                sx={{ fontSize: 14 }}
-                color="text.secondary"
-                gutterBottom
+              <Typography variant="h5"
               >
-                Word of the Day
+                Jordan Retro 1 High OG:
               </Typography>
-              <Typography variant="h5" component="div">
-                be{bull}nev{bull}o{bull}lent
+              <Typography sx={{ mt:1,mb: 1.5 }} color="text.secondary" >
+              Classic and iconic design inspired by the original Air Jordan 1.
+                
               </Typography>
-              <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                adjective
+              <Typography sx={{ mt:1,mb: 1.5 }} color="text.secondary">
+              Premium leather
               </Typography>
-              <Typography variant="body2">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
+              <Typography sx={{ mt:1,mb: 1.5 }} color="text.secondary">
+              High-top silhouette with padded collar
               </Typography>
+              <Typography sx={{ mt:1,mb: 1.5 }} color="text.secondary">
+              Nike Air cushioning
+              </Typography>
+              <Typography sx={{ mt:1,mb: 1.5 }} color="text.secondary">
+              Timeless style and heritage
+              </Typography>
+              
             </CardContent>
-            <CardActions>
-              <Button size="small">Learn More</Button>
-            </CardActions>
+            
           </Card>
         </ScrollParallax>
+        </Container>
+
+        <Container sx={{
+  width:"100%",
+  display:"flex",
+  flexDirection:"row",
+  alignItems:"center",
+  marginBottom:"100px",
+}}>   
+<Container sx={{
+  width:"600px",
+  marginTop:"100px",
+  display:"flex",
+  flexDirection:"column",
+  alignItems:"center",
+  marginBottom:"100px",
+}}>
+  <Typography
+        component="h2"
+        variant="overline"
+        color={"dark-grey"}
+        sx={{
+          fontSize:50,
+          fontWeight:600,
+        }}>Contact Us</Typography>
+        <Box id="contact"
+          component="form"
+          sx={{
+            "& .MuiTextField-root": { m: 1, },
+          }}
+          noValidate
+          autoComplete="off"
+        >
+          <div id="form">
+            <TextField
+              required
+              id="outlined-required"
+              label="Required"
+              defaultValue="First Name"
+            />
+            <TextField
+              required
+              id="outlined-required"
+              label="Required"
+              defaultValue="Last Name"
+            />
+            <TextField
+              required
+              id="outlined-required"
+              label="Required"
+              defaultValue="Email"
+            />
+             <TextField
+              id="outlined-number"
+              label="Phone Number"
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+           
+           <TextField
+          id="outlined-multiline fullWidth"
+          label="Message"
+          multiline
+          rows={4}
+          sx={{width:"450px"}}
+        />
+          </div>
+          <Button id="button" variant="contained" endIcon={<SendIcon />} sx={{
+            width:"50%",
+            borderRadius:"50px",
+            margin:" 20px 25%",
+          }}>Submit</Button>
+
+        </Box>
+        </Container>
+        <Box sx={{mt:1,
+          height:"600px",
+          width:"fit-content"
+        }}>
+        <Spline scene="https://prod.spline.design/RZlhHvPwu7t4eBP4/scene.splinecode" />
+        </Box>
+      
       </Container>
     </>
   );
