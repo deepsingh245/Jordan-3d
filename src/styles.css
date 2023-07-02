@@ -1,22 +1,59 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 body {
   margin: 0;
+  padding: 0;
+  /* height: 2300px; */
+  background-color: #5140e9;
+  background-image: linear-gradient(225deg, #5140e9 0%, #6284FF 15%, #1f50f3 25%, #d90005 90%, #ffffff 100%);
+    
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-html,
-body,
+/* html,
+body, 
 #root {
   height: 100%;
+} */
+/* 
+canvas {
+  /* background-color:grey; 
+} */
+
+#card1,#card2{
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
-.spline{
-  z-index:-1 !important;;
+#card1{
   position: absolute;
- 
-  
+margin-top: 540px;
+margin-left: 500px;
 }
 
-canvas{
-  background-color:grey;
+#card2{
+  position: absolute;
+margin-top:1110px;
+margin-left: 100px;
+}
+
+#app-bar{
+  background: rgba( 255, 255, 255, 0.1 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
 }
