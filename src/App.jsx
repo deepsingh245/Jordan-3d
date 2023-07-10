@@ -73,8 +73,7 @@ export default function App() {
           position: "absolute",
           zIndex: "3",
           top: "0",
-          // overflowX:"auto",
-          // whiteSpace:"nowrap"
+          
         }}
       >
         <ScrollParallax isAbsolutelyPositioned="true">
