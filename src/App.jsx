@@ -15,7 +15,6 @@ const bull = (
     component="span"
     sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
   >
-    •
   </Box>
 );
 export default function App() {
@@ -217,8 +216,8 @@ export default function App() {
         </Box>
         </Container>
         <Box sx={{mt:1,
-          height:"600px",
-          width:"fit-content"
+          height:"400px",
+          width:"500px"
         }}>
         <Spline scene="https://prod.spline.design/RZlhHvPwu7t4eBP4/scene.splinecode" />
         </Box>
